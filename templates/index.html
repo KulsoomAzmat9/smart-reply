@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Reply</title>
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <style>
+        body { background: #8a70d6; font-family: Arial; display:flex; justify-content:center; align-items:center; min-height:100vh; margin:0; }
+       .box { text-align:center; width:400px; }
+        h1 { color:white; } p { color:white; }
+        input, select { width:100%; padding:15px; border-radius:15px; border:none; margin:10px 0; font-size:16px; box-sizing:border-box; }
+        button { background:#ff6b7a; color:white; border:none; padding:12px 25px; border-radius:15px; font-weight:bold; cursor:pointer; }
+       .result { background:white; border-radius:15px; padding:15px; margin-top:20px; text-align:left; }
+    </style>
+</head>
+<body>
+<div class="box">
+    <h1>📱 Smart Reply</h1>
+    <p>AI Spam Detector</p>
+    <form method="POST">
+        <input type="text" name="message" placeholder="Paste message here..." value="{{ message }}" required>
+        <select name="model">
+            <option value="rf" {% if model_choice == 'rf' %}selected{% endif %}>Random Forest (98% Accuracy)</option>
+            <option value="dt" {% if model_choice == 'dt' %}selected{% endif %}>Decision Tree (100% Accuracy)</option>
+            <option value="nb" {% if model_choice == 'nb' %}selected{% endif %}>Naive Bayes (95% Accuracy)</option>
+        </select>
+        <button type="submit">Check Message</button>
+    </form>
+    {% if prediction %}
+    <div class="result">
+        <div>🤖 Model Used: {{ model_used }}</div>
+        <div>📩 Predicted Type: {{ prediction }}</div>
+        <div>💬 Suggested Reply: {{ reply }}</div>
+    </div>
+    {% endif %}
+</div>
+</body>
+</html>
