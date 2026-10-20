@@ -1,4 +1,4 @@
-# 📧 Smart Reply System - Spam Detection with 3 ML Models
+ Smart Reply System - Spam Detection with 3 ML Models
 
 An intelligent spam detection and smart auto-reply suggestion system built with Python, Flask & Machine Learning.
 Perfect for SMS, Email, and Chat message filtering.
@@ -8,7 +8,7 @@ bash
 python app_all_models.py
 Open http://127.0.0.1:5000
 
-🤖 Models Used & Accuracy
+ Models Used & Accuracy
 Model	Accuracy	Use Case
 Decision Tree (DT)	100%	Best for meeting / normal chat detection
 Random Forest (RF)	98%	Best balanced model
