@@ -19,15 +19,15 @@ Naive Bayes (NB)	95%	Best for spam / lottery messages
 Decision Tree shows 100% due to small data size. 
 On larger real-world data, accuracy is typically 85-95%. Can be improved with more data.
 
-✨ Features
-- ✅ Spam vs Not Spam / Meeting Prediction
-- 💬 Smart Reply Suggestion (Auto)
-- 🔄 Model Selector - Compare 3 algorithms
-- 🎯 Hybrid Logic: Rule-based (coffee, meeting, win, lottery) + ML Prediction
-- 🌐 Clean Flask Web Interface
-- 📱 Mobile Friendly UI
+Features
+-  Spam vs Not Spam / Meeting Prediction
+-  Smart Reply Suggestion (Auto)
+-  Model Selector - Compare 3 algorithms
+-  Hybrid Logic: Rule-based (coffee, meeting, win, lottery) + ML Prediction
+-  Clean Flask Web Interface
+-  Mobile Friendly UI
 
-📸 Screenshots
+ Screenshots
 
 1. Main UI - Empty
 Clean homepage with input and model selector.
@@ -38,12 +38,12 @@ Input: meet me for coffee | Model: Decision Tree (100%) | Result: Not Spam / Mee
 3. Spam Detection
 Input: congratulations you won 100000 | Model: Naive Bayes (95%) | Result: Spam
 
-🛠️ Installation
+ Installation
 
 ```bash
 
-# Install requirements
+ Install requirements
 pip install -r requirements.txt
 
-# Run the app
+ Run the app
 python app_all_models.py
